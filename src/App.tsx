@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import VipExperience from "./pages/VipExperience";
 import Charity from "./pages/Charity";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
 
 // Add framer-motion for animations
 import { MotionConfig } from "framer-motion";
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <MotionConfig reducedMotion="user">
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<SignUp />} />

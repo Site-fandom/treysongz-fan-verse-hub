@@ -1,15 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-12 lg:pt-32 lg:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-trey-darkPurple via-black to-black opacity-90 z-0"></div>

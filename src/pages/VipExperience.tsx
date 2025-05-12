@@ -1,6 +1,4 @@
-
 import React, { useState } from 'react';
-import Navbar from '@/components/Navbar';
 import BookingForm from '@/components/BookingForm';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -73,8 +71,6 @@ const VipExperience = () => {
 
   return (
     <div className="min-h-screen pb-16">
-      <Navbar />
-      
       <div className="container pt-24 px-4">
         <motion.div 
           initial="hidden"

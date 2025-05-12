@@ -1,6 +1,4 @@
-
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import DonationForm from '@/components/DonationForm';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
@@ -51,8 +49,6 @@ const Charity = () => {
 
   return (
     <div className="min-h-screen pb-16">
-      <Navbar />
-      
       <div className="container pt-24 px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Support Our Causes</h1>

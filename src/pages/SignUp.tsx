@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
 
-import Navbar from '@/components/Navbar';
 import ImageUpload from '@/components/ImageUpload';
 import { Button } from "@/components/ui/button";
 import {
@@ -97,8 +95,6 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen pb-16">
-      <Navbar />
-      
       <div className="container pt-24 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
