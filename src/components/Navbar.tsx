@@ -21,7 +21,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed top-0 z-50 bg-black/90 backdrop-blur-md border-b border-muted">
+    <nav className="w-full fixed top-0 z-50 bg-trey-darkPurple border-b border-trey-purple/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
@@ -37,16 +37,16 @@ export const Navbar = () => {
                 key={item.name}
                 to={item.path}
                 className={cn(
-                  "px-1 py-2 text-sm font-medium relative group",
+                  "px-1 py-2 text-sm font-bold relative group",
                   location.pathname === item.path 
-                    ? "text-primary" 
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-trey-gold" 
+                    : "text-white hover:text-trey-gold"
                 )}
               >
                 {item.name}
                 <span 
                   className={cn(
-                    "absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300",
+                    "absolute bottom-0 left-0 w-full h-0.5 bg-trey-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300",
                     location.pathname === item.path ? "scale-x-100" : ""
                   )}
                 />
@@ -61,6 +61,7 @@ export const Navbar = () => {
               size="icon" 
               onClick={toggleMenu} 
               aria-label="Toggle menu"
+              className="text-white hover:text-trey-gold"
             >
               <Menu className="h-6 w-6" />
             </Button>
@@ -70,7 +71,7 @@ export const Navbar = () => {
       
       {/* Mobile Navigation Menu */}
       <div className={cn(
-        "md:hidden fixed inset-0 bg-background z-40 transform transition-transform duration-300 ease-in-out",
+        "md:hidden fixed inset-0 bg-trey-darkPurple z-40 transform transition-transform duration-300 ease-in-out",
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="flex flex-col h-full pt-20 px-4 space-y-8 text-center">
@@ -80,10 +81,10 @@ export const Navbar = () => {
               to={item.path}
               onClick={() => setIsMenuOpen(false)}
               className={cn(
-                "px-4 py-3 text-lg font-medium rounded-md transition-colors",
+                "px-4 py-3 text-lg font-bold rounded-md transition-colors",
                 location.pathname === item.path 
-                  ? "bg-muted text-primary" 
-                  : "hover:bg-muted/50"
+                  ? "bg-muted text-trey-gold" 
+                  : "text-white hover:bg-muted/50 hover:text-trey-gold"
               )}
             >
               {item.name}
@@ -93,7 +94,7 @@ export const Navbar = () => {
             variant="ghost" 
             size="lg"
             onClick={() => setIsMenuOpen(false)}
-            className="mt-auto mb-10"
+            className="mt-auto mb-10 font-bold text-white hover:text-trey-gold"
           >
             Close Menu
           </Button>
